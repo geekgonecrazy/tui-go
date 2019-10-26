@@ -445,6 +445,11 @@ func (g *Grid) RemoveRows() {
 	g.cells = make(map[image.Point]Widget)
 }
 
+// Length returns how many rows there are in the grid
+func (g *Grid) Length() int {
+	return g.rows
+}
+
 // SetColumnStretch sets the stretch factor for a given column. If stretch > 0,
 // the column will expand to fill up available space. If multiple columns have
 // a stretch factor > 0, stretch determines how much space the column get in
